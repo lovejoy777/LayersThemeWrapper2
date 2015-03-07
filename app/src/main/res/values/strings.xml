@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Layers Theme Wrapper</string>
+
+
+    <!-- CHANGE THIS STRING TO THE SAME AS YOUR THEMENAME IN THE RAW FOLDER -->
+    <string name="themename">synergytest55</string>
+
+</resources>

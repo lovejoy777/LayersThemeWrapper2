@@ -1,0 +1,17 @@
+# LayersThemeWrapper2.
+A wrapper For themers to publish there themes on the Google PlayStore.
+Brought to you by the BitSyko development team.
+
+Instructions
+****************
+
+Your theme.zip file must be named
+with no spaces/slashes or characters and all lowercase letters or numbers with the .zip extension removed.
+
+Drop it in the "raw" folder of the apps source.
+
+Goto Strings and change the "themename" to match your file name in the raw folder.
+
+Goto drawable and swap the placeholder "ic_themeimage.png" for your own.
+
+Build and Enjoy
