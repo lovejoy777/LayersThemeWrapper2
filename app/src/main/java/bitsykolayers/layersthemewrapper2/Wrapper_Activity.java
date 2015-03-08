@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -36,6 +37,14 @@ public class Wrapper_Activity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+
+                File dir = new File(Environment.getExternalStorageDirectory() + "/Overlays");
+
+                if (!dir.exists() && !dir.isDirectory()) {
+                    dir.mkdir();
+                }
+
+
                 runtask1();
             }
         });
@@ -47,11 +56,11 @@ public class Wrapper_Activity extends Activity {
         boolean installed  =   appInstalledOrNot("com.lovejoy777.rroandlayersmanager");
         if(installed) {
 
-            // THEME NAME CHANGE THIS TO YOUR THEME NAME
+            // "THEME NAME" CHANGE "sysnergytest55" TO YOUR THEME NAME, MUST BE ALL LOWER CASE WITH THE .ZIP EXTENSION REMOVED.
             String themename = getString(R.string.themename);
 
             // FINAL PATH & NAME
-            String finalname = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + themename + ".zip";
+            String finalname = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Overlays/" + themename + ".zip";
 
             int id = this.getResources().getIdentifier(themename, "raw", this.getPackageName());
 
